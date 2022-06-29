@@ -5,7 +5,7 @@ var fft
 var particles = []
 
 function preload(){
-  song = loadSound('Sounds/Griztronics.mp3')
+  song = loadSound('Sounds/Clockwork.mp3')
   img = loadImage('Images/OPM_God.jpg')
 }
 
@@ -48,8 +48,10 @@ function draw() {
   strokeWeight(3) //weight of the brush
   noFill();
   //shapes
-  Circle(1,1);
+  SymmetricalCircle(2,2);
+  Circle(1,1,amp>200);
   //SingleWave();
+  
 
   //particles
   var p = new Particle()
@@ -65,6 +67,9 @@ function draw() {
   }
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 
 function mouseClicked(){
   if(song.isPlaying()){

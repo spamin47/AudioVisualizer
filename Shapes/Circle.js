@@ -13,11 +13,16 @@ function SymmetricalCircle(radius, frequency){
       endShape();
     }
 }
-function Circle(radius, frequency){
+function Circle(radius, frequency, ampCond){
     var t =1
     var wave = fft.waveform(); //Grabs the waveform of the song
       beginShape()
       for(var i = 0; i<=360; i+=frequency){
+        if(ampCond){
+          console.log(ampCond)
+          fill(random(0,255),random(0,255),random(0,255));
+        }
+        
         var index = floor(map(i,0,360,0,wave.length-1));
         
         var r = radius*map(wave[index],-1,1,150,350) //radius of the circle
