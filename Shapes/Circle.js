@@ -22,7 +22,6 @@ function Circle(radius, frequency){
         
         var r = radius*map(wave[index],-1,1,150,350) //radius of the circle
 
-        console.log(t);
         var x = r*sin(i)*t
         var y = r*cos(i)
         vertex(x,y)
