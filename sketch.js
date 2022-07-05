@@ -3,6 +3,7 @@
 var song
 var fft
 var particles = []
+var fireworks = []
 
 function preload(){
   song = loadSound('Sounds/Clockwork.mp3')
@@ -48,8 +49,8 @@ function draw() {
   strokeWeight(3) //weight of the brush
   noFill();
   //shapes
-  SymmetricalCircle(2,2);
-  Circle(1,1,amp>200);
+  //SymmetricalCircle(2,2);
+  Circle(1,2,amp>200);
   //SingleWave();
   
 

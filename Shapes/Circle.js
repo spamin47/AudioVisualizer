@@ -18,6 +18,7 @@ function Circle(radius, frequency, ampCond){
     var wave = fft.waveform(); //Grabs the waveform of the song
       beginShape()
       for(var i = 0; i<=360; i+=frequency){
+        //Fill inside the circle with a random color
         if(ampCond){
           console.log(ampCond)
           fill(random(0,255),random(0,255),random(0,255));
